@@ -1,4 +1,3 @@
-package Week1.Wednesday;
 
 public class Wed {
     public static void main(String[] args) {
