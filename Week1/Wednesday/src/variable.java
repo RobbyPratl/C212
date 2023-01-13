@@ -1,4 +1,3 @@
-
 public class variable {
     public static void main(String[] args) {
         int intVar = 7;

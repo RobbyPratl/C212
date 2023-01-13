@@ -1,4 +1,3 @@
-
 public class Wed {
     public static void main(String[] args) {
         int cansPerPack = 6;
