@@ -1,42 +1,49 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Launch Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Launch Mon",
-            "request": "launch",
-            "mainClass": "Mon",
-            "projectName": "C212_8da4fef7"
-        },
-        {
-            "type": "java",
-            "name": "Launch Scan",
-            "request": "launch",
-            "mainClass": "Scan",
-            "projectName": "C212_8da4fef7"
-        },
-        {
-            "type": "java",
-            "name": "Launch Wed",
-            "request": "launch",
-            "mainClass": "Wed",
-            "projectName": "C212_8da4fef7"
-        },
-        {
-            "type": "java",
-            "name": "Launch variable",
-            "request": "launch",
-            "mainClass": "variable",
-            "projectName": "C212_8da4fef7"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Thursday",
+      "request": "launch",
+      "mainClass": "Thursday",
+      "projectName": "C212_8da4fef7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch Mon",
+      "request": "launch",
+      "mainClass": "Mon",
+      "projectName": "C212_8da4fef7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Scan",
+      "request": "launch",
+      "mainClass": "Scan",
+      "projectName": "C212_8da4fef7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Wed",
+      "request": "launch",
+      "mainClass": "Wed",
+      "projectName": "C212_8da4fef7"
+    },
+    {
+      "type": "java",
+      "name": "Launch variable",
+      "request": "launch",
+      "mainClass": "variable",
+      "projectName": "C212_8da4fef7"
+    }
+  ]
 }
