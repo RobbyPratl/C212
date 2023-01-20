@@ -50,7 +50,7 @@ public class Assignment1 {
         double side2 = Math.sqrt(Math.pow((x3 - x2), 2) + Math.pow((y3 - y2), 2));
         double side3 = Math.sqrt(Math.pow((x3 - x1), 2) + Math.pow((y3 - y1), 2));
         double perimeterTri = side1 + side2 + side3;
-        double sVar = (side1 + side2 + side3) / 2;
+        double sVar = (side1 + side2 + side3) / 3;
         double areaTri = Math.sqrt((sVar * (sVar - side1) * (sVar - side2) * (sVar -
                 side3)));
         double angle3 = (180 / Math.PI) *
