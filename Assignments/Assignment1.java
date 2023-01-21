@@ -105,22 +105,22 @@ public class Assignment1 {
 
         // Problem 5
 
-        // System.out.println("Radius of the bottom of bottle");
-        // double capRadi = in.nextDouble();
-        // System.out.println("Radius of the cap of bottle");
-        // double bottomRadi = in.nextDouble();
-        // System.out.println("height of cone section of the bottle");
-        // double heightCone = in.nextDouble();
-        // System.out.println("First cylinder height (The Cap)");
-        // double firstCylinH = in.nextDouble();
-        // System.out.println("Second height of cylinder (Cylinder Below Cone)");
-        // double secCylinH = in.nextDouble();
-        // double coneVolume = (Math.PI)
-        // * (((Math.pow(bottomRadi, 2) + bottomRadi * capRadi + Math.pow(capRadi, 2)) *
-        // heightCone) / (3));
-        // double firstVolumeCyl = (Math.PI) * Math.pow(capRadi, 2) * firstCylinH;
-        // double secVolumeCyl = Math.PI * Math.pow(bottomRadi, 2) * secCylinH;
-        // System.out.println(coneVolume + firstVolumeCyl + secVolumeCyl);
+        System.out.println("Radius of the bottom of bottle (r1)");
+        double capRadi = in.nextDouble();
+        System.out.println("Radius of the cap of bottle (r2)");
+        double bottomRadi = in.nextDouble();
+        System.out.println("Height of cylinder first (h1)");
+        double firstCylinH = in.nextDouble();
+        System.out.println("Second cylinder height (h2)");
+        double secCylinH = in.nextDouble();
+        System.out.println("height of cone section of the bottle (h3)");
+        double heightCone = in.nextDouble();
+        double coneVolume = Math.PI * (Math.pow(bottomRadi, 2) + (bottomRadi * capRadi) + Math.pow(capRadi, 2))
+                * heightCone
+                / 3;
+        double firstVolumeCyl = Math.PI * Math.pow(capRadi, 2) * firstCylinH;
+        double secVolumeCyl = Math.PI * Math.pow(bottomRadi, 2) * secCylinH;
+        System.out.println(coneVolume + firstVolumeCyl + secVolumeCyl);
 
     }
 }
