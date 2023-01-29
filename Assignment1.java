@@ -6,7 +6,6 @@ public class Assignment1 {
 
                 // Problem 1
 
-
                 System.out.println("Please enter the number of Toaster");
                 int toasterNum = in.nextInt();
                 System.out.println("Please enter the number of Hair Dryer");
