@@ -9,7 +9,7 @@ public class Problem2 {
         if (10 < spending && spending < 60) {
             discount = spending * .08;
             System.out.printf("%s%.2f", "You win a discount coupon of $", discount);
-            System.out.println(". (10% of your purchase)");
+            System.out.println(". (8% of your purchase)");
         } else if (60 < spending && spending < 150) {
             discount = spending * .1;
             System.out.printf("%s%.2f", "You win a discount coupon of $", discount);
@@ -17,11 +17,11 @@ public class Problem2 {
         } else if (150 < spending && spending < 210) {
             discount = spending * .12;
             System.out.printf("%s%.2f", "You win a discount coupon of $", discount);
-            System.out.println(". (10% of your purchase)");
+            System.out.println(". (12% of your purchase)");
         } else if (210 < spending) {
             discount = spending * .14;
             System.out.printf("%s%.2f", "You win a discount coupon of $", discount);
-            System.out.println(". (10% of your purchase)");
+            System.out.println(". (14% of your purchase)");
         } else {
             System.out.println("No coupon");
         }
