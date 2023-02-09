@@ -3,19 +3,18 @@ import java.util.Scanner;
 public class Problem1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int sum = 0;
-        System.out.println("Please enter a number");
-        int input = in.nextInt();
-        if (input == 0) {
-            System.out.println("Output: 0");
-        } else if (input == 1) {
-            System.out.println("Output: 1");
-        } else {
-            for (int i = 0; i < input; i++) {
-                System.out.println(i);
-            }
-            System.out.println(sum);
+        System.out.println("Enter the number: ");
+        int count = in.nextInt();
+        int num1 = 0;
+        int num2 = 1;
+        int num3 = 0;
+
+        for (int i = 0; i < count; i++) {
+            num3 = num1 + num2;
+            num1 = num2;
+            num2 = num3;
         }
+        System.out.println("Output: " + num1);
 
     }
 }

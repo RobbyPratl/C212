@@ -8,7 +8,6 @@ public class Problem4 {
         int sum = 0;
         int num = 2;
         int count1 = 0;
-        // dont use isPrime method
         while (count1 < count) {
             boolean isPrime = true;
             for (int i = 2; i < num; i++) {
