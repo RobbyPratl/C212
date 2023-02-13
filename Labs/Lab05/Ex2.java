@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Ex2 {
+
     public static int eucDistance(int[] array1, int[] array2) {
         int sum = 0, sqrtSum;
         for (int i = 0; i < array1.length; i++) {
