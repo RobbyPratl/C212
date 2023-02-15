@@ -1,47 +1,46 @@
 import java.util.Scanner;
 
 public class P3 {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter Roman Numeral: ");
-        String roman = in.next();
-        int num = convertRomantoDeciaml(roman);
-        System.out.print("Numeral: " + num);
-
+    public static int getRomanLetterValue(String roman) {
+        int value = 0;
+        if (roman.equals("I")) {
+            value = 1;
+        } else if (roman.equals("V")) {
+            value = 5;
+        } else if (roman.equals("X")) {
+            value = 10;
+        } else if (roman.equals("L")) {
+            value = 50;
+        } else if (roman.equals("C")) {
+            value = 100;
+        } else if (roman.equals("D")) {
+            value = 500;
+        } else if (roman.equals("M")) {
+            value = 1000;
+        }
+        return value;
     }
 
     public static int convertRomantoDeciaml(String roman) {
-        char[] arr = new char[roman.length() + 1];
-        int numeral = 0;
-        for (int i = 0; i < roman.length(); i++) {
-            arr[i] = roman.charAt(i);
-        }
-        for (int i = 0; i < roman.length() + 1; i++) {
-            if (arr[i] == 'I') {
-                arr[i] = 1;
-            } else if (arr[i] == 'V') {
-                arr[i] = 5;
-            } else if (arr[i] == 'X') {
-                arr[i] = 10;
-            } else if (arr[i] == 'L') {
-                arr[i] = 50;
-            } else if (arr[i] == 'C') {
-                arr[i] = 100;
-            } else if (arr[i] == 'M') {
-                arr[i] = 1000;
+        int decimal = 0;
+        int prev = 0;
+        for (int i = roman.length() - 1; i >= 0; i--) {
+            int current = getRomanLetterValue(roman.substring(i, i + 1));
+            if (current < prev) {
+                decimal -= current;
             } else {
-                arr[i] = 0;
+                decimal += current;
             }
+            prev = current;
         }
-        for (int i = 0; i < roman.length();) {
-            if (arr[i] < arr[i + 1]) {
-                numeral += (arr[i + 1] - arr[i]);
-                i += 2;
-            } else {
-                numeral += arr[i];
-                i++;
-            }
-        }
-        return numeral;
+        return decimal;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter a roman number: ");
+        String roman = in.nextLine();
+        System.out.println(convertRomantoDeciaml(roman));
+        in.close();
     }
 }
