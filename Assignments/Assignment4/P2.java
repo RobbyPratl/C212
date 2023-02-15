@@ -1,4 +1,3 @@
-
 public class P2 {
     public static int findPostionNum(String str) {
         for (int i = 0; i < str.length(); i++) {
