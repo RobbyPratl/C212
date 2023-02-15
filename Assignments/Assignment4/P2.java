@@ -14,9 +14,6 @@ public class P2 {
     }
 
     public static int numCompare(String str1, String str2) {
-        // return as a postive number if str1 is greater than str2
-        // return as a negative number if str1 is less than str2
-        // return as 0 if str1 is equal to str2
         int pos1 = findPostionNum(str1);
         int pos2 = findPostionNum(str2);
         if (pos1 == -1 && pos2 == -1) {
