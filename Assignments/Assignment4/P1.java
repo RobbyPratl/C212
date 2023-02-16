@@ -37,5 +37,6 @@ public class P1 {
         System.out.println("allDifferent: " + allDifferent(num1, num2, num3));
         System.out.println("Sorted: " + sorted(num1, num2, num3));
 
+        in.close();
     }
 }
