@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 public class Q4 {
     public static void readFile() throws FileNotFoundException {
-        // Scanner in = new Scanner(System.in);
-        // System.out.print("Enter a file name: ");
-        // String fileName = in.nextLine();
         Scanner file = new Scanner(new File("Labs/Lab06/Q4.txt"));
         int lines = 0;
         int words = 0;
