@@ -26,6 +26,12 @@ public class TicTacToe {
         // It would be best practice to do this with a loop, but since we hardcode the
         // game to only use 3x3 boards
         // it's fine to do this without one.
+        for (int i = 0; i < state.length; i++) {
+            for (int j = 0; j < state[i].length; j++) {
+                System.out.print(state[i][j]);
+            }
+            System.out.println();
+        }
 
         return null;
     }
@@ -36,6 +42,7 @@ public class TicTacToe {
     // As you can see, you can use it just like any other variable, since it is
     // instantiated and given a value already.
     private static char[][] getInitialGameState() {
+
         return new char[][] { { emptySpaceSymbol, emptySpaceSymbol, emptySpaceSymbol },
                 { emptySpaceSymbol, emptySpaceSymbol, emptySpaceSymbol },
                 { emptySpaceSymbol, emptySpaceSymbol, emptySpaceSymbol } };
@@ -65,7 +72,7 @@ public class TicTacToe {
     private static char[][] runPlayerMove(String playerName, char playerSymbol, char[][] currentState) {
         Scanner sc = new Scanner(System.in);
         // TODO
-
+        sc.close();
         return null;
     }
 
@@ -85,6 +92,7 @@ public class TicTacToe {
     // Doesn't need to check whether move is within bounds of the board.
     private static boolean checkValidMove(int[] move, char[][] state) {
         // TODO
+
         return false;
     }
 
@@ -101,20 +109,21 @@ public class TicTacToe {
     // Given a state, return true if some player has won in that state
     private static boolean checkWin(char[][] state) {
         // TODO
-        // Hint: no need to check if player one has won and if player two has won in separate steps,
-        // you can just check if the same symbol occurs three times in any row, col, or diagonal (except empty space symbol)
+        // Hint: no need to check if player one has won and if player two has won in
+        // separate steps,
+        // you can just check if the same symbol occurs three times in any row, col, or
+        // diagonal (except empty space symbol)
         // But either implementation is valid: do whatever makes most sense to you.
-
         // Horizontals
-        if(){
-            System.out.println("You win");
         // Verticals
-        } else if (){
-            System.out.println("You win");
         // Diagonals
-        } else if (){
-            System.out.println("You win");
+
+        if (state[0][0] == state[1][1] && state[1][1] == state[2][2] && state[0][0] != emptySpaceSymbol) {
+            return true;
+        } else if (state[0][2] == state[1][1] && state[1][1] == state[2][0] && state[0][2] != emptySpaceSymbol) {
+            return true;
         }
+
         return false;
     }
 
