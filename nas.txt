@@ -1,0 +1,26 @@
+        boolean cpuGoesFirst = Math.random() < 0.5;
+        if (cpuGoesFirst) {
+            int row, col;
+            do {
+                row = (int) (Math.random() * gameState.length);
+                col = (int) (Math.random() * gameState[0].length);
+            } while (gameState[row][col] != ' ');
+            gameState[row][col] = 'O';
+        } else {
+            int centerRow = gameState.length / 2;
+            int centerCol = gameState[0].length / 2;
+
+            if (gameState[centerRow][centerCol] == ' ') {
+                gameState[centerRow][centerCol] = 'O';
+            } else {
+                int row, col;
+                do {
+                    row = (int) (Math.random() * gameState.length);
+                    col = (int) (Math.random() * gameState[0].length);
+                } while (gameState[row][col] != ' ');
+
+                gameState[row][col] = 'O';
+            }
+        }
+
+        return gameState;

@@ -26,6 +26,7 @@ public class Problem4 {
         } else {
             System.out.println("Invalid input. Please indicate with an F (Fahreheit) or C (Celsius)");
         }
+        in.close();
 
     }
 }

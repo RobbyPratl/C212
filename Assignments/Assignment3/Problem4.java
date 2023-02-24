@@ -23,5 +23,7 @@ public class Problem4 {
             num++;
         }
         System.out.println("Sum of first " + count + " prime numbers is: " + sum);
+        in.close();
+
     }
 }

@@ -16,5 +16,7 @@ public class Problem4 {
         System.out.println("Your user login name: " + firstFive + firstLetter +
                 lastTwo);
         System.out.println();
+        in.close();
+
     }
 }

@@ -14,5 +14,7 @@ public class Problem5 {
             System.out.println("Not two pairs");
         }
 
+        in.close();
+
     }
 }

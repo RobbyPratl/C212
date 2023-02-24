@@ -41,5 +41,7 @@ public class Problem2 {
                                 "Area:", areaTri,
                                 "Angle1:", angle1, "Angle2:", angle2, "Angle3:", angle3);
                 System.out.println();
+                in.close();
+
         }
 }

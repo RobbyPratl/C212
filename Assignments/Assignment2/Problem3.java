@@ -17,5 +17,7 @@ public class Problem3 {
             System.out.printf("%s%.2f", "You earned $", totalM);
             System.out.println(" this week");
         }
+        in.close();
+
     }
 }

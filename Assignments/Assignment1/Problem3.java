@@ -13,5 +13,7 @@ public class Problem3 {
         double tDEquation = (bVar * (fTRH / (aVar - fTRH)));
         System.out.printf("%s%5.2f\n", "Dew point is ", tDEquation);
         System.out.println();
+        in.close();
+
     }
 }

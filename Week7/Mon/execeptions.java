@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class execeptions {
     public static void fileRead() {
-        File inputFile = null;
+        // File inputFile = null;
         Scanner in = null;
         try {
             File inputFlie = new File("Week6/Wed/files/inpu.txt");

@@ -15,6 +15,7 @@ public class Problem1 {
             num2 = num3;
         }
         System.out.println("Output: " + num1);
+        in.close();
 
     }
 }

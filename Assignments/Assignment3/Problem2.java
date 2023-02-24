@@ -11,6 +11,7 @@ public class Problem2 {
                 System.out.println(word.substring(i, j));
             }
         }
+        in.close();
 
     }
 }

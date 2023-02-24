@@ -25,6 +25,7 @@ public class Problem2 {
         } else {
             System.out.println("No coupon");
         }
+        in.close();
 
     }
 }

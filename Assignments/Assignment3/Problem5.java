@@ -17,6 +17,7 @@ public class Problem5 {
         } else {
             System.out.println("Output: " + num2 + " is not a palindrome");
         }
+        in.close();
 
     }
 }

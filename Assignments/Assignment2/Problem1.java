@@ -16,6 +16,7 @@ public class Problem1 {
         } else {
             System.out.println("The numbers are neither increasing nor decreasing");
         }
+        in.close();
 
     }
 }

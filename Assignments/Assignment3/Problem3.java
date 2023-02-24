@@ -21,6 +21,7 @@ public class Problem3 {
 
         System.out.printf("Prey population: %.2f%n", prey);
         System.out.printf("Predator population: %.2f%n", predator);
+        in.close();
 
     }
 }

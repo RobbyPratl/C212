@@ -119,6 +119,7 @@ public class Assignment1 {
                 double firstVolumeCyl = Math.PI * Math.pow(r2, 2) * h1;
                 double secVolumeCyl = Math.PI * Math.pow(r1, 2) * h2;
                 System.out.println(coneVolume + firstVolumeCyl + secVolumeCyl);
+                in.close();
 
         }
 }

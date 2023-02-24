@@ -20,5 +20,7 @@ public class Problem5 {
         double secVolumeCyl = Math.PI * Math.pow(r2, 2) * h2;
         double totalVolume = coneVolume + firstVolumeCyl + secVolumeCyl;
         System.out.printf("%s%5.2f\n", "Total volume of the bottle is ", totalVolume);
+        in.close();
+
     }
 }
