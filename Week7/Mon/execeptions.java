@@ -8,7 +8,7 @@ public class execeptions {
         // File inputFile = null;
         Scanner in = null;
         try {
-            File inputFlie = new File("Week6/Wed/files/inpu.txt");
+            File inputFlie = new File("Week6/Wed/files/input.txt");
             // the "universal" way would be
             // File inputFlie = new File("File/input.txt");
             in = new Scanner(inputFlie);
