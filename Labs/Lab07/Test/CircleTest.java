@@ -19,8 +19,6 @@ class CircleTest {
         });
     }
 
-
-
     @Test
     void testManyCircles() {
         Circle c1 = new Circle(2);

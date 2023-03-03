@@ -1,0 +1,48 @@
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public String getStateName() {
+        return stateName;
+    }
+
+    public int getZipCode() {
+        return zipCodeNum;
+    }
+
+    public int getAptNum() {
+        return aptN;
+    }
+
+    public int getHouseNum() {
+        return houseN;
+    }
+
+    @Override
+    public String toString() {
+
+        if (aptN != null) {
+            return "{" +
+                    " houseN='" + getHouseNum() + "'" +
+                    ", streetName='" + getStreetName() + "'" +
+                    ", cityName='" + getCityName() + "'" +
+                    ", stateName='" + getStateName() + "'" +
+                    ", zipCodeNum='" + getZipCode() + "'" +
+                    "}";
+
+        } else {
+
+            return "{" +
+                    " houseN='" + getHouseNum() + "'" +
+                    ", streetName='" + getStreetName() + "'" +
+                    ", cityName='" + getCityName() + "'" +
+                    ", stateName='" + getStateName() + "'" +
+                    ", zipCodeNum='" + getZipCode() + "'" +
+                    ", aptN='" + getAptNum() + "'" +
+                    "}";
+        }
+    }
