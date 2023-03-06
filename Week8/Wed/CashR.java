@@ -1,15 +1,24 @@
 public class CashR {
     private double total;
     private int count;
+    private int invoiceNum;
+    private static int lastInvoiceNum = 1000;
 
     public CashR() {
-        count = 0;
-        total = 0;
+        // invoiceNum = lastInvoiceNum++;
+        this(0, 0);
     }
 
     public CashR(int c, double t) {
         count = c;
         total = t;
+        invoiceNum = lastInvoiceNum++;
+    }
+
+    public CashR(int c, double t, int i) {
+        count = c;
+        total = t;
+        invoiceNum = i;
     }
 
     /**
@@ -33,6 +42,10 @@ public class CashR {
     public void resetVar() {
         count = 0;
         total = 0;
+    }
+
+    public int getInvoice() {
+        return invoiceNum;
     }
 
 }
