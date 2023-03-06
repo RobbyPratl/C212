@@ -13,5 +13,7 @@ public class Mon {
         }
         actualFloor = floor > 13 ? floor - 1 : floor;
         System.out.println("Actual floor " + actualFloor);
+        in.close();
+
     }
 }

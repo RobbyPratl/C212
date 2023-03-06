@@ -19,6 +19,8 @@ public class sentAvg {
 
         avg = sum / counter;
         System.out.println("Avg salary is " + avg);
+        in.close();
+
     }
 
 }

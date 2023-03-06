@@ -25,7 +25,9 @@ public class Problem11 {
                         throw new ClassCastException("ERR: input is not number\n");
                     }
                 }
+
             }
+
         }
     }
 }

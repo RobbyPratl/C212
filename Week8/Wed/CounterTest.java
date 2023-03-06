@@ -1,5 +1,3 @@
-import javax.management.monitor.CounterMonitorMBean;
-
 public class CounterTest {
     public static void main(String[] args) {
 
