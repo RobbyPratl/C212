@@ -12,7 +12,7 @@ This assignment will be done with partner (not a group). Due to not being able t
 
 ## Update 03-02-2023
 
-Starting lab 7 and Assignment 6, we will be utlizing generated test created by us (students)
+Starting lab 7 and Assignment 6, we will be utlizing generated test created by us (students). These test will also be graded with the assignments to ensure that we are not modifying the answers to match the wrong answers. 
 
 ## Update 03-06-2023
 
