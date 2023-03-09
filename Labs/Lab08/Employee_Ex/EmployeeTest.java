@@ -1,4 +1,4 @@
-package Labs.Lab08.Employee;
+package Labs.Lab08.Employee_Ex;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;

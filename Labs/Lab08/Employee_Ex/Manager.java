@@ -1,4 +1,4 @@
-package Labs.Lab08.Employee;
+package Labs.Lab08.Employee_Ex;
 
 public class Manager extends Employee {
     private String department;

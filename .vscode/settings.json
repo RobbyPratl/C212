@@ -1,6 +1,6 @@
 {
-  "java.debug.settings.onBuildFailureProceed": false
-  // "java.debug.settings.onBuildFailureProceed": true
+  // "java.debug.settings.onBuildFailureProceed": false
+  "java.debug.settings.onBuildFailureProceed": true
 
 
 }

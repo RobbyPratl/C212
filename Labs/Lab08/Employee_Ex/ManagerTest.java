@@ -1,4 +1,4 @@
-package Labs.Lab08.Employee;
+package Labs.Lab08.Employee_Ex;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
@@ -20,9 +20,14 @@ public class ManagerTest {
 
     @Test
     public void testGetSharesOwnedByExecutives() {
-        Executive e1 = new Executive("John Doe", 150000.0, "Executive", 1000);
-        Executive e2 = new Executive("Jane Doe", 180000.0, "Financial", 2000);
-        assertEquals(3000, Executive.getSharesOwnedByExecutives());
+        Executive executive1 = new Executive("John", 100000, "Marketing", 500);
+        Executive executive2 = new Executive("Jane", 120000, "Finance", 1000);
+
+        executive1.setNumberOfShares(800);
+        executive2.setNumberOfShares(500);
+
+        assertEquals(800, executive1.getSharesOwned());
+        assertEquals(500, executive2.getSharesOwned());
     }
 
     @Test

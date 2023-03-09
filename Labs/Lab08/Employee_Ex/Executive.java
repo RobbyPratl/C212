@@ -1,14 +1,23 @@
-package Labs.Lab08.Employee;
+package Labs.Lab08.Employee_Ex;
 
 public class Executive extends Employee {
     private String department;
     private int numberOfShares;
-    private static int sharesOwnedByExecutives = 0;
+    private int sharesOwned;
 
     public Executive(String name, double salary, String department, int numberOfShares) {
         super(name, salary);
+        this.department = department;
         this.numberOfShares = numberOfShares;
-        sharesOwnedByExecutives += numberOfShares;
+        this.sharesOwned = numberOfShares;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String newDepartment) {
+        department = newDepartment;
     }
 
     public int getNumberOfShares() {
@@ -16,21 +25,17 @@ public class Executive extends Employee {
     }
 
     public void setNumberOfShares(int newNumberOfShares) {
-        int difference = newNumberOfShares - numberOfShares;
+        sharesOwned -= numberOfShares;
         numberOfShares = newNumberOfShares;
-        sharesOwnedByExecutives += difference;
+        sharesOwned += numberOfShares;
     }
 
-    public static int getSharesOwnedByExecutives() {
-        return sharesOwnedByExecutives;
+    public int getSharesOwned() {
+        return sharesOwned;
     }
 
     @Override
     public String toString() {
         return super.toString() + ", Shares Owned: " + numberOfShares;
-    }
-
-    public String getDepartment() {
-        return department;
     }
 }
