@@ -21,9 +21,11 @@ public class ChoiceQuestionTester1 {
         presentQuestion(cq1);
         presentQuestion(cq2);
 
+        Question q1 = cq1;
+
     }
 
-    public static void presentQuestion(ChoiceQuestion cq1){
+    public static void presentQuestion(ChoiceQuestion cq1) {
         cq1.display();
         Scanner in = new Scanner(System.in);
         String ans = in.nextLine();
