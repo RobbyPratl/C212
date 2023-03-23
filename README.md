@@ -17,3 +17,11 @@ Starting lab 7 and Assignment 6, we will be utlizing generated test created by u
 ## Update 03-06-2023
 
 Next week from 3/13-3/17 is Spring Break.
+
+## Update 03-23-2023 
+
+Welcome back, due to the amount of work being submitted by students the professor will now require us to use an autograder. They are attempting this for Lab09, they will implement test cases, some will be released and not to students. Results will be posted with each readme and that brings me to the next thing.
+
+Since most will either understand what the code does for each week, assignment, or lab. Yet, I will be implementing readmes to each week and assignment along with an labs. I will also include the pdfs but I will need to check if that's a violation if I post them out to the public. These updates will come slowly as we are heading into the ending of the school year. 
+
+6 weeks until school ends, with my final day being May 4th since I have no more finals after that. The offical last day is May 6. I will create some type of timer to countdown to the end of the school year.
