@@ -12,5 +12,8 @@ public class QuestionTester {
         Scanner in = new Scanner(System.in);
         String ans = in.nextLine();
         System.out.println(q1.checkAnswer(ans));
+
+        in.close();
     }
+
 }

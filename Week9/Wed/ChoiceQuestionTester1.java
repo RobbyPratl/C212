@@ -21,7 +21,7 @@ public class ChoiceQuestionTester1 {
         presentQuestion(cq1);
         presentQuestion(cq2);
 
-        Question q1 = cq1;
+        // Question q1 = cq1;
 
     }
 
@@ -30,6 +30,7 @@ public class ChoiceQuestionTester1 {
         Scanner in = new Scanner(System.in);
         String ans = in.nextLine();
         System.out.println(cq1.checkAnswer(ans));
+        in.close();
 
     }
 }

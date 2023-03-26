@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 
-public class ChoiceQuestion extends Question{
+public class ChoiceQuestion extends Question {
 
     // instance variables
     ArrayList<String> choices;
 
     // constructor
-    public ChoiceQuestion(int numOfChoices){
+    public ChoiceQuestion(int numOfChoices) {
         choices = new ArrayList<>(numOfChoices);
     }
 
-    public void addChoice(String choice, boolean correct){
+    public void addChoice(String choice, boolean correct) {
         choices.add(choice);
-        if(correct)
+        if (correct)
             setAnswer(choice);
     }
 
