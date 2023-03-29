@@ -1,38 +1,22 @@
 package Problem1;
 
-public class Driver {
-    private String name;
+public class Driver extends Person {
+    private final String name;
     private int age;
     private boolean isLicense;
 
-    public Driver(String name, int age, boolean isLicense) {
+    public Driver(String name, int age) {
         this.age = age;
-        this.isLicense = isLicense;
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public boolean isLicense() {
-        return isLicense;
+        return this.isLicense = age >= 16;
     }
 
-    public void setLicense(boolean isLicense) {
-        this.isLicense = isLicense;
+    @Override
+    public String getDetails() {
+        return "Name: " + name + "\n" + "Age: " + age + "\n" + "Does the Person have a license? " + isLicense();
     }
 
 }
