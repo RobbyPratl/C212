@@ -33,7 +33,9 @@ public class PollTracking {
         chocolateButton.addActionListener(new VoteButtonListener("Chocolate"));
         votingPanel.add(chocolateButton);
 
+        // adjustment
         JTextField customField = new JTextField(10);
+        customField.addKeyListener(new keyDex());
 
         votingPanel.add(customField);
 
@@ -92,6 +94,9 @@ public class PollTracking {
                 disableComponents(comp);
             }
 
+            // Change
+            StackedChartDisplay.display("Favorite Ice Cream Flavor", categories, votes);
+
         }
 
         private void disableComponents(Component comp) {
@@ -102,6 +107,7 @@ public class PollTracking {
             }
             comp.setEnabled(false);
         }
+
     }
 
     private static void updateLabels() {
@@ -115,5 +121,34 @@ public class PollTracking {
             }
         }
         otherLabel.setText(otherText.toString());
+    }
+
+    // method
+    private static class keyDex implements KeyListener {
+        public void keyPressed(KeyEvent e) {
+            if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                JTextField source = (JTextField) e.getSource();
+                String category = source.getText();
+                if (!category.isEmpty()) {
+                    int index = categories.indexOf(category);
+                    if (index >= 0) {
+                        votes.set(index, votes.get(index) + 1);
+                    } else {
+                        categories.add(category);
+                        votes.add(1);
+                    }
+                    updateLabels();
+                }
+                source.setText("");
+            }
+        }
+
+        @Override
+        public void keyTyped(KeyEvent e) {
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+        }
     }
 }
