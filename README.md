@@ -6,7 +6,7 @@ Welcome to C212 (Intro to Software Systems at Indiana University Bloomington) he
 
 The following assignment will be a group assignment:
 
-* Assignment6
+* --> Assignment6
 
 This assignment will be done with partner (not a group). Due to not being able to make the directory to work on my partner's computer it will be done on indiviual directories.
 
