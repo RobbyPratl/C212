@@ -26,8 +26,9 @@ public class StackedChart extends JComponent {
         g.setColor(Color.BLACK);
         for (int i = 1; i <= 5; i++) {
             int y = i * height / 5;
-            g.drawLine(0, y, width, y);
-            g.drawString(i * 20 + "%", 5, y - 5);
+            g.drawLine(-1, y, width, y);
+            // shift the number more up
+            g.drawString("" + (6 - i) * 20, 5, y);
         }
 
         int x = 50;
