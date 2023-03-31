@@ -31,7 +31,7 @@ Since most will either understand what the code does for each week, assignment, 
 The following Assignment will be a group assignment:
 
 - Assignment6
---> Assignment8
+* --> Assignment8
 
 As stated before, this is a partnered assignment not a group assignmemnt. Depending on how this weeks assignment 7 goes, an autograder will be in place, or, since this is a group project, it will be manually checked. 
 
