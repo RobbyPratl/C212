@@ -6,7 +6,7 @@ Welcome to C212 (Intro to Software Systems at Indiana University Bloomington) he
 
 The following assignment will be a group assignment:
 
-- Assignment6
+* Assignment6
 
 This assignment will be done with partner (not a group). Due to not being able to make the directory to work on my partner's computer it will be done on indiviual directories.
 
@@ -25,3 +25,18 @@ Welcome back, due to the amount of work being submitted by students the professo
 Since most will either understand what the code does for each week, assignment, or lab. Yet, I will be implementing readmes to each week and assignment along with labs. I will also include the pdfs but I will need to check if that's a violation if I post them out to the public. These updates will come slowly as we are heading into the end of the school year.
 
 6 weeks until school ends, with my final day being May 4th since I have no more finals after that. The official last day is May 6. I will create some type of timer to count down to the end of the school year.
+
+## Update 03-30-2023
+
+The following Assignment will be a group assignment:
+
+- Assignment6
+* Assignment8
+
+As stated before, this is a partnered assignment not a group assignmemnt. Depending on how this weeks assignment 7 goes, an autograder will be in place, or, since this is a group project, it will be manually checked. 
+
+Due to the end of semester stuff going on, the readme files for each assignment and notes will be really delayed. This will be a summer update and possibly the final update as I will not be in this class anymore. There might be a few patches as there are some programs that aren't working as they should, but it should be in the summer as well. 
+
+Since there's a whole bunch of working being loaded, I can't create that clock for the countdown towards the end of the semester. Maybe in the summer I can create the template for it for possibly two new repos, more on that later. 
+
+
