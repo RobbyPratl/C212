@@ -1,7 +1,7 @@
 package problem3;
 
 public class Student implements Performance {
-    private final String name;
+    private String name;
     private String grade;
 
     public Student(String name, String grade) {
@@ -17,8 +17,16 @@ public class Student implements Performance {
         }
     }
 
+    public void setName(String newName) {
+
+    }
+
     public String getGrade() {
-        return grade;
+        if (grade == null) {
+            return "";
+        } else {
+            return grade;
+        }
     }
 
     public void setGrade(String grade) {
@@ -26,7 +34,7 @@ public class Student implements Performance {
     }
 
     @Override
-    public double getPerformace() {
+    public double getPerformance() {
         if (getGrade().equalsIgnoreCase("A+") | getGrade().equalsIgnoreCase("A")) {
             return 4.0;
         } else if (getGrade().equalsIgnoreCase("A-")) {
@@ -48,7 +56,8 @@ public class Student implements Performance {
         } else if (getGrade().equalsIgnoreCase("D")) {
             return 1.0;
         } else {
-            return 0.0;
+            return 0;
         }
     }
+
 }

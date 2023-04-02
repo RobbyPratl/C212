@@ -1,7 +1,7 @@
 package problem3;
 
 public class Instructor implements Performance {
-    private final String name;
+    private String name;
     private String rating;
 
     public Instructor(String name, String rating) {
@@ -17,8 +17,17 @@ public class Instructor implements Performance {
         }
     }
 
+    public void setName(String newName) {
+        this.name = newName;
+
+    }
+
     public String getRating() {
-        return rating;
+        if (rating == null) {
+            return "";
+        } else {
+            return rating;
+        }
     }
 
     public void setRating(String rating) {
@@ -26,7 +35,7 @@ public class Instructor implements Performance {
     }
 
     @Override
-    public double getPerformace() {
+    public double getPerformance() {
         if (getRating().equalsIgnoreCase("Excellent")) {
             return 5.0;
         } else if (getRating().equalsIgnoreCase("Good")) {

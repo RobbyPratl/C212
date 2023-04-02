@@ -12,15 +12,11 @@ public class Customer {
     }
 
     public String getName() {
-        if (null == name) {
-            return " ";
-        } else {
-            return name;
-        }
+        return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = (name != null) ? name : "";
     }
 
     public String getAddress() {
@@ -28,7 +24,8 @@ public class Customer {
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.address = (address != null) ? address : "";
+
     }
 
     public int getNumber() {
@@ -36,7 +33,7 @@ public class Customer {
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        this.number = (number <= 0) ? 0 : number;
     }
 
     public String mailCheck() {

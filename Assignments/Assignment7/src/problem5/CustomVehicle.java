@@ -15,7 +15,7 @@ public class CustomVehicle {
         this.gear = gear;
         this.speed = speed;
         this.capacity = capacity;
-        this.passengers = new ArrayList<Person>();
+        this.passengers = new ArrayList<Person>(capacity);
     }
 
     public int getGear() {
@@ -38,21 +38,22 @@ public class CustomVehicle {
         return passengers;
     }
 
-    public void addPassenger(Person person) {
+    public void addPassenger(Person newPerson) {
         if (passengers.size() < capacity) {
-            passengers.add(person);
-            System.out.println(((Driver) person).getName() + " has been added to the vehicle.");
+            passengers.add(newPerson);
         } else {
             System.out.println("Vehicle is at maximum capacity.");
         }
     }
 
-    public void removePassenger(Person person) {
-        if (passengers.remove(person)) {
-            System.out.println(((Driver) person).getName() + " has been removed from the vehicle.");
+    public void removePassenger(Person toRemovPerson) {
+
+        if (passengers.remove(toRemovPerson)) {
+            removePassenger(toRemovPerson);
         } else {
-            System.out.println(((Driver) person).getName() + " is not in the vehicle.");
+            System.out.println(" There is no passenger to remove");
         }
+
     }
 
     public void setCapacity(int capacity) {

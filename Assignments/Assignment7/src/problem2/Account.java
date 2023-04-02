@@ -13,7 +13,7 @@ public class Account extends Customer {
     }
 
     public void setAccountNumber(long accountNumber) {
-        this.accountNumber = accountNumber;
+        this.accountNumber = (accountNumber <= 0) ? 0 : accountNumber;
     }
 
     @Override

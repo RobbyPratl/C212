@@ -1,7 +1,7 @@
 package problem1;
 
 public class Passenger extends Person {
-    private final String name;
+    private String name;
     private int age;
 
     public Passenger(String name, int age) {
@@ -11,6 +11,10 @@ public class Passenger extends Person {
         } else {
             this.age = age;
         }
+    }
+
+    public void setName(String name) {
+        this.name = (name != null) ? name : "";
     }
 
     public String getName() {
@@ -26,7 +30,7 @@ public class Passenger extends Person {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        this.age = (age <= 0) ? 0 : age;
     }
 
     @Override

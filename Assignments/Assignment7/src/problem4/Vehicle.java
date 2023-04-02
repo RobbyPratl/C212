@@ -14,7 +14,7 @@ public class Vehicle {
     }
 
     public void setGear(int gear) {
-        this.gear = gear;
+        this.gear = (gear >= 0) ? gear : 0;
     }
 
     public int getSpeed() {
@@ -22,7 +22,7 @@ public class Vehicle {
     }
 
     public void setSpeed(int speed) {
-        this.speed = speed;
+        this.speed = (speed >= 0) ? speed : 0;
     }
 
     public void accelerate(int amount) {

@@ -13,7 +13,7 @@ public class Car extends Vehicle {
     }
 
     public void setMileage(int mileage) {
-        this.mileage = mileage;
+        this.mileage = (mileage >= 0) ? mileage : 0;
     }
 
     @Override

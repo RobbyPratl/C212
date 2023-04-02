@@ -1,27 +1,17 @@
 package problem1;
 
 public class Driver extends Person {
-    private final String name;
-    private int age;
-    private boolean isLicense;
+    private boolean isLicensed;
 
-    public Driver(String name, int age) {
-        this.name = name;
-        if (age <= 0) {
-            this.age = 0;
-            this.isLicense = false;
-        } else {
-            this.age = age;
-            this.isLicense = age >= 16;
-        }
+    private String name;
+    private int age;
+
+    public void setName(String name) {
+        this.name = (name != null) ? name : "";
     }
 
     public String getName() {
-        if (name == null) {
-            return " ";
-        } else {
-            return name;
-        }
+        return name;
     }
 
     public int getAge() {
@@ -29,22 +19,50 @@ public class Driver extends Person {
     }
 
     public void setAge(int age) {
-        this.age = age;
-        this.isLicense = age >= 16;
+        if (age < 0) {
+            this.age = 0;
+        }
+        if (age < 16) {
+            this.age = age;
+            setLicensed(false);
+        }
+        if (age >= 16) {
+            this.age = age;
+            setLicensed(true);
+        }
+        this.age = (age <= 0) ? 0 : age;
     }
 
     public boolean isLicensed() {
-        return isLicense;
+        return isLicensed;
     }
 
-    public void setLicense(boolean isLicense) {
-        this.isLicense = isLicense;
+    public void setLicensed(boolean licensed) {
+        isLicensed = licensed;
     }
 
-    @Override
+    public Driver(String name, int age) {
+        this.age = age;
+
+        if (age >= 0) {
+            if (age >= 16) {
+                this.isLicensed = true;
+            } else {
+                this.isLicensed = false;
+            }
+        }
+
+        this.name = (name != null) ? name : "";
+    }
+
     public String getDetails() {
-        String licenseStatus = (isLicensed()) ? "licensed" : "not licensed";
-        return "Name: " + name + "\n" + "Age: " + age + "\n" + "Does the Person have a license? " + licenseStatus;
-    }
+        String str = name + ", " + age + ", ";
 
+        if (isLicensed) {
+            str += "Licensed";
+        } else {
+            str += "Not Licensed";
+        }
+        return str;
+    }
 }
