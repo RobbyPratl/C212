@@ -1,13 +1,17 @@
-public abstract class CollisionObject {
-    // Needs an x/y coordinate pair
-    private float x;
-    private float y;
+import java.awt.Graphics2D;
 
-    // WARNING!: when position based on the screen/window size we will need to use
-    // this.getPreferredSize().width and this.getPreferredSize().height due to the
-    // JPanel
+public abstract class CollisionObject implements Drawable {
+    protected double x;
+    protected double y;
 
-    // this.getPreferredSize().width;
-    // this.getPreferredSize().height;
+    public CollisionObject(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
 
+    public abstract boolean collidesWith(CollisionObject other);
+
+    // Override this method to draw the object and add functionality to draw the
+    // shapes
+    public abstract void draw(Graphics2D g2d);
 }
