@@ -1,4 +1,6 @@
 import java.awt.Graphics2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
 import java.awt.Color;
 
 public class RectangleObject extends CollisionObject {
@@ -46,4 +48,25 @@ public class RectangleObject extends CollisionObject {
         g2d.fillRect((int) x, (int) y, (int) width, (int) height);
     }
 
+    @Override
+    public double ComputeDistance(double CameraX, double CameraY) {
+        double distance = Double.POSITIVE_INFINITY;
+
+        Point2D[] vertices = getVertices();
+        for (int i = 0; i < vertices.length; i++) {
+            Line2D segment = new Line2D.Double(vertices[i], vertices[(i + 1) % vertices.length]);
+            double segmentDistance = segment.ptSegDist(CameraX, CameraY);
+            distance = Math.min(distance, segmentDistance);
+        }
+        return distance;
+    }
+
+    private Point2D[] getVertices() {
+        Point2D[] vertices = new Point2D[4];
+        vertices[0] = new Point2D.Double(x, y);
+        vertices[1] = new Point2D.Double(x + width, y);
+        vertices[2] = new Point2D.Double(x + width, y + height);
+        vertices[3] = new Point2D.Double(x, y + height);
+        return vertices;
+    }
 }

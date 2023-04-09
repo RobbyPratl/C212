@@ -20,6 +20,7 @@ public class RaymarcherPanel extends JPanel {
     private final RaymarcherRunner raymarcherRunner;
 
     private List<CollisionObject> objects;
+    Camera camera = new Camera(100, 100);
 
     public RaymarcherPanel(RaymarcherRunner raymarcherRunner) {
         this.raymarcherRunner = raymarcherRunner;
@@ -44,18 +45,95 @@ public class RaymarcherPanel extends JPanel {
             Color color = new Color(rand.nextInt(255), rand.nextInt(255), rand.nextInt(255));
             objects.add(new CircleObject(x, y, radius, color));
         }
+        addMouseMotionListener(camera);
+        addMouseListener(camera);
+        // add the mouse press listener
 
+    }
+
+    // create the marching rays
+    public ArrayList<March> marchs() {
+        double x = this.camera.getX();
+        double y = this.camera.getY();
+        ArrayList<March> marches = new ArrayList<March>();
+
+        while (x >= 0 && x <= this.getPreferredSize().width && y >= 0 && y <= this.getPreferredSize().height) {
+            double closeDist = Double.MAX_VALUE;
+            for (CollisionObject obj : objects) {
+                double dist = obj.ComputeDistance(x, y);
+                if (dist < closeDist) {
+                    closeDist = dist;
+                }
+            }
+
+            if (closeDist < 0.1) {
+                break;
+            }
+
+            March march = new March(x, y, closeDist + x, y);
+            marches.add(march);
+            x += closeDist;
+        }
+
+        return marches;
     }
 
     @Override
     public void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        g2d.setColor(Color.black);
+        g2d.setColor(Color.white);
         g2d.fillRect(0, 0, this.getWidth(), this.getHeight());
 
-        for (CollisionObject obj : objects) {
+        // for (CollisionObject obj : objects) {
+        // obj.draw(g2d);
+        // }
 
+        // camera.draw(g2d);
+
+        double minDist = Double.MAX_VALUE;
+        for (CollisionObject obj : objects) {
+            double dist = obj.ComputeDistance(camera.getX(), camera.getY());
+            if (dist < minDist) {
+                minDist = dist;
+            }
+        }
+
+        g2d.setColor(Color.red);
+        g2d.drawOval((int) (camera.getX() - minDist * 2),
+                (int) (camera.getY() - minDist * 2),
+                (int) (minDist * 4), (int) (minDist * 4));
+
+        // this draws the shapes dont touch
+        for (CollisionObject obj : objects) {
             obj.draw(g2d);
         }
+
+        ArrayList<March> marches = marchs();
+        for (March march : marches) {
+            march.draw(g2d);
+        }
+        camera.draw(g2d);
+
     }
+
+    public void update() {
+        this.repaint();
+    }
+
+    public List<CollisionObject> getObjects() {
+        return objects;
+    }
+
+    public Camera getCamera() {
+        return camera;
+    }
+
+    public void setObjects(List<CollisionObject> objects) {
+        this.objects = objects;
+    }
+
+    public void setCamera(Camera camera) {
+        this.camera = camera;
+    }
+
 }
