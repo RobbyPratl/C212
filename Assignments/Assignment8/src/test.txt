@@ -1,0 +1,65 @@
+            double closeDist = Double.MAX_VALUE;
+            for (CollisionObject obj : objects) {
+                double dist = obj.ComputeDistance(x, y);
+                if (dist < closeDist) {
+                    closeDist = dist;
+                }
+            }
+
+            if (closeDist < 0.1) {
+                break;
+            }
+
+            March march = new March(x, y, closeDist + x, y);
+            marches.add(march);
+            x += closeDist;
+
+
+while (angle < 360) {
+    double closeDist = Double.MAX_VALUE;
+    for (CollisionObject obj : objects) {
+        double dist = obj.ComputeDistance(x, y);
+        if (dist < closeDist) {
+            closeDist = dist;
+        }
+    }
+
+    if (closeDist < 0.1) {
+        break;
+    }
+
+    March march = new March(x, y, x + closeDist * Math.cos(Math.toRadians(angle)),
+            y + closeDist * Math.sin(Math.toRadians(angle)));
+    marches.add(march);
+    x += closeDist * Math.cos(Math.toRadians(angle));
+    y += closeDist * Math.sin(Math.toRadians(angle));
+    angle += this.camera.getResolution();
+}
+
+
+
+        ArrayList<March> marches = new ArrayList<March>();
+        // use a while loop to create the rays
+        while (x >= 0 && x <= this.getPreferredSize().width && y >= 0 && y <= this.getPreferredSize().height) {
+            double closeDist = Double.MAX_VALUE;
+            for (CollisionObject obj : objects) {
+                double dist = obj.ComputeDistance(x, y);
+                if (dist < closeDist) {
+                    closeDist = dist;
+                }
+            }
+
+            if (closeDist < 0.1) {
+                break;
+            }
+
+            March march = new March(x, y, closeDist + x, y);
+            marches.add(march);
+            x += closeDist;
+        }
+
+        return marches;
+
+
+
+

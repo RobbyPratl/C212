@@ -5,6 +5,7 @@ import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+// import java.awt.geom.Point2D;
 
 public class Camera implements Drawable, MouseMotionListener, MouseListener {
     private int x;
@@ -17,11 +18,11 @@ public class Camera implements Drawable, MouseMotionListener, MouseListener {
         this.y = y;
     }
 
-    public double getX() {
+    public int getX() {
         return x;
     }
 
-    public double getY() {
+    public int getY() {
         return y;
     }
 
@@ -59,9 +60,8 @@ public class Camera implements Drawable, MouseMotionListener, MouseListener {
 
     @Override
     public void draw(Graphics2D g2d) {
-        g2d.setColor(Color.green);
-        // g2d.fillOval(x - radius, y - radius, radius * 2, radius * 2);
-        g2d.drawOval(x - radius, y - radius, radius * 2, radius * 2);
+        g2d.setColor(Color.black);
+        g2d.fillOval(x - radius, y - radius, 2 * radius, 2 * radius);
     }
 
     @Override
@@ -70,6 +70,7 @@ public class Camera implements Drawable, MouseMotionListener, MouseListener {
         p.translate(-Panel.WIDTH / 2, -Panel.HEIGHT / 2);
         x = p.x;
         y = p.y;
+
     }
 
     @Override
@@ -99,10 +100,10 @@ public class Camera implements Drawable, MouseMotionListener, MouseListener {
     @Override
     public void mousePressed(MouseEvent event) {
         int button = event.getButton();
-        if (button == MouseEvent.BUTTON1) { // left mouse button
-            angle += 1; // increment angle by 1
-        } else if (button == MouseEvent.BUTTON3) { // right mouse button
-            angle -= 1; // decrement angle by 1
+        if (button == MouseEvent.BUTTON1) {
+            angle += 1;
+        } else if (button == MouseEvent.BUTTON3) {
+            angle -= 1;
         }
     }
 }
