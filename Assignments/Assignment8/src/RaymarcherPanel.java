@@ -106,11 +106,11 @@ public class RaymarcherPanel extends JPanel {
 
         camera.draw(g2d);
 
-        double x2 = camera.getX() + camera.getRadius() * Math.cos(camera.getAngle());
-        double y2 = camera.getY() + camera.getRadius() * Math.sin(camera.getAngle());
+        // double x2 = camera.getX() + camera.getRadius() * Math.cos(camera.getAngle());
+        // double y2 = camera.getY() + camera.getRadius() * Math.sin(camera.getAngle());
 
-        g2d.setColor(Color.red);
-        g2d.drawLine(camera.getX(), camera.getY(), (int) x2, (int) y2);
+        // g2d.setColor(Color.red);
+        // g2d.drawLine(camera.getX(), camera.getY(), (int) x2, (int) y2);
 
     }
 }
