@@ -1,4 +1,4 @@
-package Week12.Wed;
+package Week012.Wed;
 
 public class Address {
     private String name;

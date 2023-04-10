@@ -1,4 +1,4 @@
-package Week12.Wed;
+package Week012.Wed;
 
 public class InvoiceDem {
     public static void main(String[] args) {
