@@ -8,12 +8,6 @@ public class RectangleObject extends CollisionObject {
     private double height;
     private Color color;
 
-    // public RectangleObject(double x, double y, double width, double height) {
-    // super(x, y);
-    // this.width = width;
-    // this.height = height;
-    // }
-
     // TEST SUBJECT
 
     public RectangleObject(double x, double y, double width, double height, Color color) {
